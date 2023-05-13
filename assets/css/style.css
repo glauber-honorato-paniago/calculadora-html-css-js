@@ -18,11 +18,11 @@ main{
     border-radius: 10px;
 }
 
-.botao-calc:not([data-calc="="]){
+.btn-calc:not([data-calc="="]){
     height: 50px;
 }
 
-.botao-calc{
+.btn-calc{
     background-color: #434152;
     color: white;
     border: none;
@@ -30,7 +30,7 @@ main{
     box-shadow: 2px 2px rgb(34, 34, 34);
 }
 
-.botao-calc:hover{
+.btn-calc:hover{
     background-color: #585764;
 }
 
@@ -68,7 +68,7 @@ main{
     color: gray;
 
 }
-#operation-type{
+#calc-display-operation-type{
     font-size: .55em;
     position: absolute;
     top: 0;

@@ -18,33 +18,34 @@ function appendNumber(number){
 function preCalculo(operation){
     displayCalcOld.textContent = displayCalc.textContent
     displayCalc.textContent = ''
-    typecalc.textContent = operation
+    displaytypecalc.textContent = operation
 
 }
 
 function calculate(){
     if (displayCalc.textContent && displayCalcOld.textContent){
-        let mathExpression = `${displayCalcOld.textContent} ${typecalc.textContent} ${displayCalc.textContent}`
+        let mathExpression = `${displayCalcOld.textContent} ${displaytypecalc.textContent} ${displayCalc.textContent}`
         displayCalcOld.textContent = mathExpression
         displayCalc.textContent = eval(mathExpression)
-        typecalc.textContent = ''
+        displaytypecalc.textContent = ''
     }
 }
 
 function clearDisplay(){
     displayCalc.textContent = ''
     displayCalcOld.textContent = ''
-    typecalc.textContent = ''
+    displaytypecalc.textContent = ''
 }
 
 const displayCalc = document.getElementById('calc-display')
 const displayCalcOld = document.getElementById('calc-display-old')
-const typecalc = document.getElementById('operation-type')
+const displaytypecalc = document.getElementById('calc-display-operation-type')
 
 for (let i = 0; i <= 9; i++) {
     console.log(document.querySelector(`[data-calc="${i}"]`))
     document.querySelector(`[data-calc="${i}"]`).addEventListener('click', () => appendNumber(i))
 }
+
 document.querySelector('[data-calc="."]').addEventListener('click', () => {
     appendNumber('.')
 })
